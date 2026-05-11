@@ -1,0 +1,20 @@
+{
+  "name": "Alicja w Krainie Czarów",
+  "short_name": "Alicja",
+  "start_url": "/alicja_w_krainie_czarow/index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#222222",
+  "icons": [
+    {
+      "src": "images/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "images/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

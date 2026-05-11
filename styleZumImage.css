@@ -1,0 +1,61 @@
+/* затемнённый фон */
+.image-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.8);
+
+    overflow: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px;
+}
+
+
+/* увеличенная картинка */
+.image-overlay {
+    /* overflow: hidden; */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.image-overlay img {
+    max-width: none;   
+    max-height: none;
+
+    width: auto;
+    height: auto;
+
+    border-radius: 10px;
+
+    transform: scale(1.3); 
+    transform-origin: top center;
+    max-width: 850px;
+}
+
+
+@keyframes zoomIn {
+    from { transform: scale(0.7); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.zum {
+    cursor: zoom-in;
+    transition: transform 0.2s ease;
+}
+
+.zum:hover {
+    transform: scale(1.05);
+}
+
+.image-close {
+    position: fixed;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    color: red;
+    cursor: pointer;
+    z-index: 1000;
+}

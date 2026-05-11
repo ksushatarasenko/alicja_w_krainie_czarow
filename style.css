@@ -90,20 +90,20 @@ ol{
 
 
 /* a -sylka */
-
 a {
     display: inline-block;
     text-decoration: none;
     cursor: pointer;
     transition: transform 1s ease;
-    color: rgb(218, 231, 229);
-    font-size: 30px;
+    color: rgb(227, 142, 90);
+    font-size: 28px;
 }
 
 a:hover {
     transform: scale(0.9);
     color: rgb(199, 199, 1)
 }
+
 
 /* ulHome */
 
