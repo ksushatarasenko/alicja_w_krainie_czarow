@@ -694,3 +694,109 @@ button:hover {
     }
 
 }
+
+/* слова */
+/* =========================
+   WORDS PAGE
+========================= */
+
+#wordsContainer {
+
+    width: 90%;
+
+    max-width: 800px;
+
+    margin: 20px auto;
+
+}
+
+.word-card {
+
+    background: white;
+
+    border-radius: 18px;
+
+    padding: 20px;
+
+    margin-bottom: 16px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    box-shadow:
+        0 5px 20px rgba(0,0,0,0.08);
+
+}
+
+.word-title {
+
+    font-size: 28px;
+
+    font-weight: bold;
+
+    color: #7b2cbf;
+
+    margin-bottom: 6px;
+
+}
+
+.word-translation {
+
+    font-size: 22px;
+
+}
+
+.word-actions {
+
+    display: flex;
+
+    gap: 10px;
+
+}
+
+.word-actions button {
+
+    border: none;
+
+    background: #ff7675;
+
+    color: white;
+
+    padding: 12px;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    font-size: 20px;
+
+}
+
+.empty {
+
+    text-align: center;
+
+    font-size: 24px;
+
+    margin-top: 50px;
+
+}
+
+/* mobile */
+
+@media (max-width: 768px) {
+
+    .word-card {
+
+        flex-direction: column;
+
+        gap: 20px;
+
+        align-items: flex-start;
+
+    }
+
+}
