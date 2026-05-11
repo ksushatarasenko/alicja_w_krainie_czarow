@@ -5,12 +5,15 @@
 }
 
 body {
-    padding: 1%;
+    margin: 0;
+    padding: 0;
     max-width: 1400px;
-    margin: 0 auto;
-    height: auto;
-    font-family: 'Nunito', 'Comic Neue', sans-serif;
-    color: #333; /* не чисто чёрный */
+    margin-inline: auto;
+
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    color: #333;
+    line-height: 1.5;
+    line-height:1.45; margin:0; padding:0
 }
 
 .wrapper {
@@ -21,14 +24,7 @@ body {
     padding-bottom: 10%;
 }
 
-.wraper {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin: 0;
-    background-color: blanchedalmond;
-    padding-bottom: 10%;
-}
+
 hr{
     width: 90%;
     margin: 1% auto;
@@ -138,7 +134,7 @@ a:hover {
 /* IMG/ VIDEO prezent */
 .video {
     width: 80%;
-    height: 36em;
+    /* height: 36em; */
     display: flex;
     justify-content: center;
     padding: 5px;
@@ -146,7 +142,7 @@ a:hover {
 }
 .prezent{
     width: 80%;
-    height: 54em;
+    /* height: 54em; */
     display: flex;
     justify-content: center;
     padding: 5px;
@@ -154,19 +150,19 @@ a:hover {
 }
 .pdf{
     width: 60%;
-    height: 54em;
+    /* height: 54em; */
     display: flex;
     justify-content: center;
     padding: 5px;
     margin: 2% auto;
 }
 
-.video iframe,
+/* .video iframe,
 .prezent iframe,
 .pdf iframe {
     width: 100%;
     height: 90%;
-}
+} */
 
 .image {
     text-align: center;
@@ -560,3 +556,141 @@ button:hover {
         width: 100%;
         height: 100%;
     }
+
+    /* =========================
+   MOBILE / TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    body {
+        padding: 0;
+    }
+
+    .wrapper {
+        width: 100%;
+    }
+
+    /* HEADER */
+
+    header {
+        height: auto;
+        padding: 10px 0;
+    }
+
+    header > ul {
+        flex-direction: column;
+        gap: 15px;
+        font-size: 18px;
+    }
+
+    a {
+        font-size: 20px;
+    }
+
+    /* TITLES */
+
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    h3 {
+        font-size: 22px;
+    }
+
+    h4 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 18px;
+        margin: 10px;
+        line-height: 1.7;
+    }
+
+    .text {
+        width: 96%;
+        padding: 10px;
+    }
+
+    /* IMAGES */
+
+    .image img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* VIDEO */
+
+    .video,
+    .prezent,
+    .pdf {
+        width: 100%;
+        height: auto;
+    }
+
+    .video iframe,
+    .prezent iframe,
+    .pdf iframe {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        height: auto;
+    }
+
+    /* FLEX */
+
+    .two,
+    .flex {
+        flex-direction: column;
+    }
+
+    /* AUDIO */
+
+    .audio-card {
+        padding: 15px;
+    }
+
+    .audio-info {
+        flex-direction: column;
+        gap: 8px;
+        font-size: 16px;
+    }
+
+    .progress-container {
+        width: 100%;
+    }
+
+    /* TABLE */
+
+    table {
+        display: block;
+        overflow-x: auto;
+        width: 100%;
+        font-size: 16px;
+    }
+
+    th,
+    td {
+        min-width: 120px;
+    }
+
+    /* ICON */
+
+    .icon {
+        width: 90%;
+        height: auto;
+        padding: 20px 0;
+    }
+
+    /* ZOOM IMAGE */
+
+    .image-overlay img {
+        max-width: 95%;
+        transform: scale(1);
+    }
+
+}
