@@ -53,3 +53,70 @@ html{scroll-behavior:auto}
 @media (max-width:480px){
 .back-to-top{right:12px; bottom:12px; --btn-size:44px}
 }
+
+/*  */
+#floatingAudioBtn {
+
+    position: fixed;
+
+    right: 20px;
+    bottom: 90px;
+
+    width: 70px;
+    height: 70px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #ff7675;
+    color: white;
+
+    font-size: 28px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    z-index: 9999;
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,0.25);
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+
+}
+
+/* hover */
+
+#floatingAudioBtn:hover {
+
+    transform: scale(1.08);
+
+}
+
+/* active */
+
+#floatingAudioBtn:active {
+
+    transform: scale(0.95);
+
+}
+
+/* mobile */
+
+@media (max-width: 768px) {
+
+    #floatingAudioBtn {
+
+        width: 64px;
+        height: 64px;
+
+        font-size: 24px;
+
+        right: 16px;
+        bottom: 80px;
+
+    }
+
+}

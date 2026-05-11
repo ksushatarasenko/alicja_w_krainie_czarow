@@ -248,3 +248,51 @@ if ("mediaSession" in navigator) {
     });
 
 }
+
+// 
+const floatingBtn =
+    document.getElementById("floatingAudioBtn");
+
+/* FLOATING BUTTON */
+
+floatingBtn.addEventListener("click", () => {
+
+    if (audio.paused) {
+
+        audio.play();
+
+        floatingBtn.innerHTML = "⏸";
+
+        playBtn.innerHTML = "⏸ Пауза";
+
+    } else {
+
+        audio.pause();
+
+        floatingBtn.innerHTML = "▶";
+
+        playBtn.innerHTML = "▶️ Начать";
+
+    }
+
+});
+
+/* sync buttons */
+
+audio.addEventListener("play", () => {
+
+    floatingBtn.innerHTML = "⏸";
+
+});
+
+audio.addEventListener("pause", () => {
+
+    floatingBtn.innerHTML = "▶";
+
+});
+
+audio.addEventListener("ended", () => {
+
+    floatingBtn.innerHTML = "▶";
+
+});
