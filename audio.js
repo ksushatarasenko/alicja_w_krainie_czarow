@@ -102,12 +102,22 @@ function pauseAudio() {
 
 }
 
+
+
 playBtn.addEventListener("click", () => {
 
     if (audio.paused) {
-        playAudio();
+
+        audio.play();
+
+        playBtn.innerHTML = "⏸ Пауза";
+
     } else {
-        pauseAudio();
+
+        audio.pause();
+
+        playBtn.innerHTML = "▶️ Начать";
+
     }
 
 });
