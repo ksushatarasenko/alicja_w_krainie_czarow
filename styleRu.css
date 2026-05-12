@@ -1,0 +1,85 @@
+.ru-btn {
+    background: linear-gradient(135deg, #6ec6ff, #4f8cff);
+    color: white;
+    border: none;
+    border-radius: 18px;
+    padding: 6px 18px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 3%;
+
+    box-shadow: 0 4px 0 #2f5fbf;
+    
+    transition: all 0.15s ease;
+}
+
+/* Наведение */
+.ru-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 0 #2857b5;
+    background: linear-gradient(135deg, #7ad4ff, #3872d1);
+}
+
+/* Нажатие */
+.ru-btn:active {
+    transform: translateY(4px);
+    box-shadow: 0 2px 0 #2f5fbf;
+}
+
+/* Для планшета/телефона */
+@media (max-width: 768px) {
+    .ru-btn {
+        font-size: 22px;
+        padding: 12px 22px;
+    }
+}
+
+/* Модалка */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 20px;
+    max-width: 800px;
+    width: 90%;
+    max-height: 80vh;        /* 👈 ограничение по высоте */
+    overflow-y: auto;        /* 👈 вертикальная прокрутка */
+    border-radius: 8px;
+    position: relative;
+}
+
+.close {
+    position: sticky;        /* чтобы крестик был виден при прокрутке */
+    top: 0;
+    float: right;
+    cursor: pointer;
+    background: #fff;
+    padding: 4px 8px;
+    z-index: 10;
+    color: red;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.modal-word {
+    color: #0a58ca;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.modal-word:hover {
+    opacity: 0.8;
+}

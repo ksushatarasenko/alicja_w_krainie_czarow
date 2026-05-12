@@ -28,3 +28,18 @@
 
 
 <h2 class="site"><a href="" target="_blank" >Jak mierzymy czas? <img src="../../../image/site.png" alt=""></a></h2>
+
+
+<!-- RU -->
+ <button class="ru-btn modal-trigger" data-modal="ru_1">RU</button>
+
+<div class="modal" data-modal="ru_1">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h4>Мешко I</h4>
+        <p>
+            Первый исторический правитель Польши,
+            основатель государства и династии Пястов.
+        </p>
+    </div>
+</div>
