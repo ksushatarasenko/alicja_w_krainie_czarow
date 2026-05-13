@@ -57,26 +57,29 @@ header>ul {
 /* UL */
 
 ul {
-    /* list-style-type: none; */
-    padding: 1%;
+    list-style: none;
+    padding-left: 0;
+    padding: 5px;
     line-height: 1.2;
     font-size: 18px;
 }
 
 ul>li {
-    margin-left: 10%;
-    padding: 0.5%;
+    margin-left: 10px;
+    padding: 5px;
 }
-.lis>a{
-    padding: 2%;
-    width: 96%;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 30px;
+li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 5px;
 }
-
+li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0.4em; /* регулируешь */
+  font-size: 1.2em;
+}
 
 ol{
     margin-left: 5%;
@@ -581,21 +584,35 @@ button:hover {
     header > ul {
         flex-direction: column;
         gap: 15px;
-        font-size: 18px;
+        list-style: none;
+    }
+    header > ul> li{
+         list-style-type: none;
+    }
+    li::before {
+    content: none;
     }
 
     a {
         font-size: 20px;
+        color: wheat;
+    }
+    .text{
+        padding: 5px;
+    }
+    .text p{
+        width: 90%;
+        margin-left: 7px;
     }
 
     /* TITLES */
 
     h1 {
-        font-size: 30px;
+        font-size: 26px;
     }
 
     h2 {
-        font-size: 26px;
+        font-size: 24px;
     }
 
     h3 {
@@ -608,8 +625,8 @@ button:hover {
 
     p {
         font-size: 18px;
-        margin: 10px;
-        line-height: 1.7;
+        margin: 5px;
+        line-height: 1.5;
     }
 
     .text {
@@ -692,6 +709,21 @@ button:hover {
         max-width: 95%;
         transform: scale(1);
     }
+    .ul>li>a{
+    font-size: 16px;
+    color: #685207;
+    margin-left: -50px;
+    text-align: left;
+    width: 98%;
+    }
+    .ul{
+    text-align: left;
+    }
+    .p30{
+        font-size: 20px;
+        text-align: left;
+    }
+    
 
 }
 
