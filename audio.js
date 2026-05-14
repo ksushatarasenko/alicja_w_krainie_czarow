@@ -72,6 +72,7 @@
 // });
 
 const audio = document.getElementById("audioPlayer");
+audio.playbackRate = 0.9;
 const playBtn = document.getElementById("playBtn");
 
 const progressContainer = document.getElementById("progressContainer");
@@ -121,6 +122,62 @@ playBtn.addEventListener("click", () => {
     }
 
 });
+
+const slowBtn = document.getElementById("slowBtn");
+const fastBtn = document.getElementById("fastBtn");
+const speedLabel = document.getElementById("speedLabel");
+
+/* стартовая скорость */
+
+let speed = 1;
+
+audio.playbackRate = speed;
+
+/* обновление текста */
+
+function updateSpeedLabel() {
+
+    speedLabel.innerHTML = `${speed.toFixed(1)}x`;
+
+}
+
+/* медленнее */
+
+slowBtn.addEventListener("click", () => {
+
+    if (speed > 0.5) {
+
+        speed -= 0.1;
+
+        speed = Number(speed.toFixed(1));
+
+        audio.playbackRate = speed;
+
+        updateSpeedLabel();
+
+    }
+
+});
+
+/* быстрее */
+
+fastBtn.addEventListener("click", () => {
+
+    if (speed < 2) {
+
+        speed += 0.1;
+
+        speed = Number(speed.toFixed(1));
+
+        audio.playbackRate = speed;
+
+        updateSpeedLabel();
+
+    }
+
+});
+
+updateSpeedLabel();
 
 /* =========================
    AUDIO END

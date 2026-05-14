@@ -25,6 +25,7 @@ body {
 }
 
 
+
 hr{
     width: 90%;
     margin: 1% auto;
@@ -52,6 +53,27 @@ header>ul {
     font-size: 22px;
     gap: 100px;
     
+}
+/* header li{
+
+    list-style: none;
+
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+} */
+.header li::before {
+
+    content: none;
+
+}
+header a {
+    text-decoration: none;
+    color: whitesmoke;
 }
 
 /* UL */
@@ -246,6 +268,58 @@ a:hover {
     50% { transform: scale(1.05); }
     100% { transform: scale(1); }
 }
+.speed-controls {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+
+    margin-top: 18px;
+
+}
+
+.speed-controls button {
+
+    border: none;
+    border-radius: 18px;
+
+    padding: 10px 18px;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    background: #e8e8e8;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+
+}
+
+/* hover */
+
+.speed-controls button:hover {
+
+    transform: translateY(-2px);
+
+    background: #dcdcdc;
+
+}
+
+/* скорость */
+
+#speedLabel {
+
+    font-size: 20px;
+    font-weight: 700;
+
+    color: #333;
+
+    min-width: 52px;
+    text-align: center;
+    
+}
 
 /* ПРОГРЕСС */
 .progress-container {
@@ -257,6 +331,7 @@ a:hover {
     margin-top: 15px;
     position: relative;
     cursor: pointer;
+    
 }
 
 .progress {
@@ -266,6 +341,12 @@ a:hover {
     border-radius: 10px;
 }
 
+ 
+#slowBtn,
+#fastBtn {
+    background: #ff7675;
+    color: white;
+}
 /* кружок */
 .progress-thumb {
     position: absolute;
